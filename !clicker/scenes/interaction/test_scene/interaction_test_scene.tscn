@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://csnkgk13jvene"]
+
+[ext_resource type="Environment" uid="uid://cgi8a0mxp5qm1" path="res://!clicker/resources/world_env/default_world_env.tres" id="2_lgefc"]
+[ext_resource type="Material" uid="uid://w3s0srsl3tmt" path="res://!clicker/resources/materials/prototype_materials/base_prototype_albedo_material.tres" id="3_yjv8l"]
+
+[node name="InteractionTestScene" type="Node3D"]
+
+[node name="TestCamera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -5.28557e-08, 6.96349e-08, 0, 0.79653, 0.604599, -8.74228e-08, 0.604599, -0.79653, -0.152255, 3.46947, -4.72402)
+fov = 82.666
+
+[node name="DefaultWorldEnv" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_lgefc")
+
+[node name="BaseFloor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139038, 0, 0.0775299)
+snap = 1.0
+size = Vector3(5.88647, 1, 5.72427)
+material = ExtResource("3_yjv8l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.99665, 0)
+directional_shadow_mode = 0
