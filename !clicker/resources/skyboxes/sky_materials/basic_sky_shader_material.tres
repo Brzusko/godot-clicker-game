@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://6yfhw8e0wqs7"]
+
+[ext_resource type="Shader" path="res://!clicker/scripts/shaders/sky/base_sky_shader.gdshader" id="1_0rj13"]
+
+[resource]
+shader = ExtResource("1_0rj13")
+shader_parameter/color_top = Color(0.577719, 0.940351, 0.313646, 1)
+shader_parameter/color_bottom = Color(0.0525299, 0.928873, 0.785058, 1)
+shader_parameter/blend_height = 1.0

@@ -1,0 +1,6 @@
+[gd_resource type="Sky" load_steps=2 format=3 uid="uid://bweqe0ie3o0ea"]
+
+[ext_resource type="Material" uid="uid://6yfhw8e0wqs7" path="res://!clicker/resources/skyboxes/sky_materials/basic_sky_shader_material.tres" id="1_biijl"]
+
+[resource]
+sky_material = ExtResource("1_biijl")
