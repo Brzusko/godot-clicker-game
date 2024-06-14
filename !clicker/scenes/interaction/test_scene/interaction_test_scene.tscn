@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://csnkgk13jvene"]
+[gd_scene load_steps=3 format=3 uid="uid://csnkgk13jvene"]
 
 [ext_resource type="Environment" uid="uid://cgi8a0mxp5qm1" path="res://!clicker/resources/world_env/default_world_env.tres" id="2_lgefc"]
 [ext_resource type="Material" uid="uid://w3s0srsl3tmt" path="res://!clicker/resources/materials/prototype_materials/base_prototype_albedo_material.tres" id="3_yjv8l"]
