@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://csnkgk13jvene"]
+[gd_scene load_steps=5 format=3 uid="uid://csnkgk13jvene"]
 
 [ext_resource type="Environment" uid="uid://cgi8a0mxp5qm1" path="res://!clicker/resources/world_env/default_world_env.tres" id="2_lgefc"]
+[ext_resource type="PackedScene" uid="uid://c35wn7ojh06ut" path="res://!clicker/scenes/camera/camera_3d.tscn" id="3_jvq43"]
 [ext_resource type="Material" uid="uid://w3s0srsl3tmt" path="res://!clicker/resources/materials/prototype_materials/base_prototype_albedo_material.tres" id="3_yjv8l"]
+[ext_resource type="Script" path="res://!clicker/scripts/camera/camera_3d.gd" id="4_sy5io"]
 
 [node name="InteractionTestScene" type="Node3D"]
 
@@ -17,3 +19,9 @@ material = ExtResource("3_yjv8l")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.99665, 0)
 directional_shadow_mode = 0
+
+[node name="Camera3D" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("3_jvq43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 3, 6)
+fov = 100.0
+script = ExtResource("4_sy5io")
+target_node = NodePath("../BaseFloor")
