@@ -15,16 +15,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if target_node:
 		look_at(target_node.global_transform.origin, Vector3.UP)
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			fov = clamp(fov - zoom_speed, min_fov, max_fov)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			fov = clamp(fov + zoom_speed, min_fov, max_fov)
-	elif event is InputEventMagnifyGesture:
-		print(event.factor)
-		#fov = clamp(fov / (1 - event.factor * 0.1), min_fov, max_fov )
